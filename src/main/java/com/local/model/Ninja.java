@@ -1,5 +1,6 @@
 package com.local.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ninja {
@@ -13,13 +14,12 @@ public class Ninja {
     public Ninja() {
     }
 
-    public Ninja(int ninjaId, String nombreNinja, RangoEnum rangoNinja, String aldeaNinja,
-            List<Habilidad> habilidades) {
+    public Ninja(int ninjaId, String nombreNinja, String rangoNinja, String aldeaNinja) {
         this.ninjaId = ninjaId;
         this.nombreNinja = nombreNinja;
-        this.rangoNinja = rangoNinja;
+        this.rangoNinja = RangoEnum.getRangoEnum(rangoNinja);
         this.aldeaNinja = aldeaNinja;
-        this.habilidades = habilidades;
+        this.habilidades = new ArrayList<>();
     }
 
     public int getNinjaId() {
@@ -56,6 +56,10 @@ public class Ninja {
 
     public List<Habilidad> getHabilidades() {
         return this.habilidades;
+    }
+
+    public void setHabilidades(List<Habilidad> habilidades) {
+        this.habilidades = habilidades;
     }
 
     public void addHabilidad(Habilidad habilidad) {

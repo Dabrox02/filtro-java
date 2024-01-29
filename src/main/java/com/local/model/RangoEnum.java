@@ -13,4 +13,22 @@ public enum RangoEnum {
         return nombreRango;
     }
 
+    public static RangoEnum getRangoEnum(String rangoEnum) {
+        if (rangoEnum.equalsIgnoreCase("genin")) {
+            return RangoEnum.GENIN;
+        }
+        if (rangoEnum.equalsIgnoreCase("chunin")) {
+            return RangoEnum.CHUNIN;
+        }
+        if (rangoEnum.equalsIgnoreCase("jonin")) {
+            return RangoEnum.JONIN;
+        }
+        if (rangoEnum.equalsIgnoreCase("shinobi")) {
+            return RangoEnum.SHINOBI;
+        }
+        if (rangoEnum.equalsIgnoreCase("kage")) {
+            return RangoEnum.KAGE;
+        }
+        return null;
+    }
 }

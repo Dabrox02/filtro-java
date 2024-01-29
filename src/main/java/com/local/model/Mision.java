@@ -10,10 +10,10 @@ public class Mision {
     public Mision() {
     }
 
-    public Mision(int misionId, String descripcionMision, RangoEnum rangoMision, double recompensaMision) {
+    public Mision(int misionId, String descripcionMision, String rangoMision, double recompensaMision) {
         this.misionId = misionId;
         this.descripcionMision = descripcionMision;
-        this.rangoMision = rangoMision;
+        this.rangoMision = RangoEnum.getRangoEnum(rangoMision);
         this.recompensaMision = recompensaMision;
     }
 
@@ -52,11 +52,11 @@ public class Mision {
     @Override
     public String toString() {
         return "{" +
-            " misionId='" + getMisionId() + "'" +
-            ", descripcionMision='" + getDescripcionMision() + "'" +
-            ", rangoMision='" + getRangoMision() + "'" +
-            ", recompensaMision='" + getRecompensaMision() + "'" +
-            "}";
+                " misionId='" + getMisionId() + "'" +
+                ", descripcionMision='" + getDescripcionMision() + "'" +
+                ", rangoMision='" + getRangoMision() + "'" +
+                ", recompensaMision='" + getRecompensaMision() + "'" +
+                "}";
     }
 
 }

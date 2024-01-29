@@ -42,8 +42,8 @@ public class Ninja {
         return this.rangoNinja;
     }
 
-    public void setRangoNinja(RangoEnum rangoNinja) {
-        this.rangoNinja = rangoNinja;
+    public void setRangoNinja(String rangoNinja) {
+        this.rangoNinja = RangoEnum.getRangoEnum(rangoNinja);
     }
 
     public String getAldeaNinja() {
@@ -68,13 +68,13 @@ public class Ninja {
 
     @Override
     public String toString() {
-        return "{" +
-                " ninjaId='" + getNinjaId() + "'" +
-                ", nombreNinja='" + getNombreNinja() + "'" +
-                ", rangoNinja='" + getRangoNinja() + "'" +
-                ", aldeaNinja='" + getAldeaNinja() + "'" +
-                ", habilidades='" + getHabilidades() + "'" +
-                "}";
+        return "============= \n Datos Ninja: {" +
+                "\n ninjaId='" + getNinjaId() + "'" +
+                "\n nombreNinja='" + getNombreNinja() + "'" +
+                "\n rangoNinja='" + getRangoNinja() + "'" +
+                "\n aldeaNinja='" + getAldeaNinja() + "'" +
+                "\n habilidades='" + getHabilidades() + "'" +
+                "\n } \n ==================";
     }
 
 }

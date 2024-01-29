@@ -54,11 +54,11 @@ public class Mision implements Serializable {
     @Override
     public String toString() {
         return "{" +
-                " misionId='" + getMisionId() + "'" +
-                ", descripcionMision='" + getDescripcionMision() + "'" +
-                ", rangoMision='" + getRangoMision() + "'" +
-                ", recompensaMision='" + getRecompensaMision() + "'" +
-                "}";
+                "\n misionId='" + getMisionId() + "'" +
+                "\n descripcionMision='" + getDescripcionMision() + "'" +
+                "\n rangoMision='" + getRangoMision() + "'" +
+                "\n recompensaMision='" + getRecompensaMision() + "'" +
+                "\n }";
     }
 
 }

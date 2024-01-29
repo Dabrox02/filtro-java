@@ -2,7 +2,6 @@ package com.local.persistence;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.DatabaseMetaData;
 
 public class ConexionBD {
 
@@ -21,10 +20,6 @@ public class ConexionBD {
     private static Connection getConexion(String url, String usuario, String clave) {
         try {
             conexion = DriverManager.getConnection(url, usuario, clave);
-            if (conexion != null) {
-                DatabaseMetaData meta = conexion.getMetaData();
-                System.out.println("Base Datos Conectada " + meta.getDatabaseProductName());
-            }
         } catch (Exception e) {
             System.out.println("Ocurrio un error: " + e.getMessage());
         }

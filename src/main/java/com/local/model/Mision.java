@@ -1,6 +1,8 @@
 package com.local.model;
 
-public class Mision {
+import java.io.Serializable;
+
+public class Mision implements Serializable {
 
     private int misionId;
     private String descripcionMision;
@@ -37,8 +39,8 @@ public class Mision {
         return this.rangoMision;
     }
 
-    public void setRangoMision(RangoEnum rangoMision) {
-        this.rangoMision = rangoMision;
+    public void setRangoMision(String rangoMision) {
+        this.rangoMision = RangoEnum.getRangoEnum(rangoMision);
     }
 
     public double getRecompensaMision() {

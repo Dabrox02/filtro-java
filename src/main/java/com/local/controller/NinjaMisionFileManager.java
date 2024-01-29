@@ -42,12 +42,14 @@ public abstract class NinjaMisionFileManager {
         File file = new File(FILENAME);
 
         if (file.exists()) {
-            try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
-                oos.writeObject(misiones);
-                System.out.println("Misiones almacenadas");
-                return true;
-            } catch (Exception e) {
-                System.out.println("Ha ocurrido un error al escribir misiones completadas: " + e.getMessage());
+            if (misiones != null && !misiones.isEmpty()) {
+                try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
+                    oos.writeObject(misiones);
+                    System.out.println("Misiones almacenadas");
+                    return true;
+                } catch (Exception e) {
+                    System.out.println("Ha ocurrido un error al escribir misiones completadas: " + e.getMessage());
+                }
             }
         }
         return false;

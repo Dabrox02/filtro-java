@@ -25,4 +25,12 @@ public class Habilidad {
         this.descripcionHabilidad = descripcionHabilidad;
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                " nombreHabilidad='" + getNombreHabilidad() + "'" +
+                ", descripcionHabilidad='" + getDescripcionHabilidad() + "'" +
+                "}";
+    }
+
 }
